@@ -1,0 +1,461 @@
+diff --git a/applications/solvers/combustion/coldEngineFoam/Make/options b/applications/solvers/combustion/coldEngineFoam/Make/options
+index c79b6e49..b8663723 100644
+--- a/applications/solvers/combustion/coldEngineFoam/Make/options
++++ b/applications/solvers/combustion/coldEngineFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../XiFoam/XiEngineFoam \
+     -I../XiFoam \
+     -I../../compressible/rhoPimpleFoam \
+diff --git a/applications/solvers/combustion/reactingFoam/rhoReactingBuoyantFoam/Make/options b/applications/solvers/combustion/reactingFoam/rhoReactingBuoyantFoam/Make/options
+index 0c0c8e3e..ae7f0513 100644
+--- a/applications/solvers/combustion/reactingFoam/rhoReactingBuoyantFoam/Make/options
++++ b/applications/solvers/combustion/reactingFoam/rhoReactingBuoyantFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I$(FOAM_SOLVERS)/combustion/reactingFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/combustion/reactingFoam/rhoReactingFoam/Make/options b/applications/solvers/combustion/reactingFoam/rhoReactingFoam/Make/options
+index 0c0c8e3e..ae7f0513 100644
+--- a/applications/solvers/combustion/reactingFoam/rhoReactingFoam/Make/options
++++ b/applications/solvers/combustion/reactingFoam/rhoReactingFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I$(FOAM_SOLVERS)/combustion/reactingFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/compressible/rhoPimpleFoam/overRhoPimpleDyMFoam/Make/options b/applications/solvers/compressible/rhoPimpleFoam/overRhoPimpleDyMFoam/Make/options
+index 3d58b8c4..dd83b36a 100644
+--- a/applications/solvers/compressible/rhoPimpleFoam/overRhoPimpleDyMFoam/Make/options
++++ b/applications/solvers/compressible/rhoPimpleFoam/overRhoPimpleDyMFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I$(LIB_SRC)/finiteVolume/cfdTools \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/compressible/rhoSimpleFoam/overRhoSimpleFoam/Make/options b/applications/solvers/compressible/rhoSimpleFoam/overRhoSimpleFoam/Make/options
+index d69a4104..0797c7ee 100644
+--- a/applications/solvers/compressible/rhoSimpleFoam/overRhoSimpleFoam/Make/options
++++ b/applications/solvers/compressible/rhoSimpleFoam/overRhoSimpleFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I$(LIB_SRC)/finiteVolume/cfdTools \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/heatTransfer/buoyantBoussinesqPimpleFoam/Make/options b/applications/solvers/heatTransfer/buoyantBoussinesqPimpleFoam/Make/options
+index c5cad124..5148c248 100644
+--- a/applications/solvers/heatTransfer/buoyantBoussinesqPimpleFoam/Make/options
++++ b/applications/solvers/heatTransfer/buoyantBoussinesqPimpleFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../buoyantBoussinesqSimpleFoam \
+     -I../../incompressible/pimpleFoam \
+     -I$(LIB_SRC)/sampling/lnInclude \
+diff --git a/applications/solvers/heatTransfer/buoyantPimpleFoam/Make/options b/applications/solvers/heatTransfer/buoyantPimpleFoam/Make/options
+index 128034e6..2fcd2ca9 100644
+--- a/applications/solvers/heatTransfer/buoyantPimpleFoam/Make/options
++++ b/applications/solvers/heatTransfer/buoyantPimpleFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../../compressible/rhoPimpleFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/heatTransfer/buoyantPimpleFoam/overBuoyantPimpleDyMFoam/Make/options b/applications/solvers/heatTransfer/buoyantPimpleFoam/overBuoyantPimpleDyMFoam/Make/options
+index 75d0ded8..33640376 100644
+--- a/applications/solvers/heatTransfer/buoyantPimpleFoam/overBuoyantPimpleDyMFoam/Make/options
++++ b/applications/solvers/heatTransfer/buoyantPimpleFoam/overBuoyantPimpleDyMFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I$(FOAM_SOLVERS)/heatTransfer/buoyantPimpleFoam \
+     -I$(FOAM_SOLVERS)/compressible/rhoPimpleFoam/overRhoPimpleDyMFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/heatTransfer/solidFoam/Make/options b/applications/solvers/heatTransfer/solidFoam/Make/options
+index 5b05f2e1..4d373538 100644
+--- a/applications/solvers/heatTransfer/solidFoam/Make/options
++++ b/applications/solvers/heatTransfer/solidFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../chtMultiRegionFoam/include \
+     -I../chtMultiRegionFoam/solid \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/incompressible/pimpleFoam/SRFPimpleFoam/Make/options b/applications/solvers/incompressible/pimpleFoam/SRFPimpleFoam/Make/options
+index 37cb3a60..4d54ba8b 100644
+--- a/applications/solvers/incompressible/pimpleFoam/SRFPimpleFoam/Make/options
++++ b/applications/solvers/incompressible/pimpleFoam/SRFPimpleFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/incompressible/pimpleFoam/overPimpleDyMFoam/Make/options b/applications/solvers/incompressible/pimpleFoam/overPimpleDyMFoam/Make/options
+index 467d7e75..8759e012 100644
+--- a/applications/solvers/incompressible/pimpleFoam/overPimpleDyMFoam/Make/options
++++ b/applications/solvers/incompressible/pimpleFoam/overPimpleDyMFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/incompressible/simpleFoam/SRFSimpleFoam/Make/options b/applications/solvers/incompressible/simpleFoam/SRFSimpleFoam/Make/options
+index 37cb3a60..4d54ba8b 100644
+--- a/applications/solvers/incompressible/simpleFoam/SRFSimpleFoam/Make/options
++++ b/applications/solvers/incompressible/simpleFoam/SRFSimpleFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/incompressible/simpleFoam/overSimpleFoam/Make/options b/applications/solvers/incompressible/simpleFoam/overSimpleFoam/Make/options
+index 1562594f..bc8b3d5c 100644
+--- a/applications/solvers/incompressible/simpleFoam/overSimpleFoam/Make/options
++++ b/applications/solvers/incompressible/simpleFoam/overSimpleFoam/Make/options
+@@ -1,4 +1,6 @@
+ EXE_INC = \
++    -I. \
++    -I.. \
+     -I$(FOAM_SOLVERS)/incompressible/pimpleFoam/overPimpleDyMFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/lagrangian/kinematicParcelFoam/Make/options b/applications/solvers/lagrangian/kinematicParcelFoam/Make/options
+index d7531a9d..04d5331b 100644
+--- a/applications/solvers/lagrangian/kinematicParcelFoam/Make/options
++++ b/applications/solvers/lagrangian/kinematicParcelFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I$(FOAM_SOLVERS)/lagrangian/reactingParcelFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/finiteArea/lnInclude \
+diff --git a/applications/solvers/lagrangian/reactingParcelFoam/Make/options b/applications/solvers/lagrangian/reactingParcelFoam/Make/options
+index 44f50c4d..a82d71fe 100644
+--- a/applications/solvers/lagrangian/reactingParcelFoam/Make/options
++++ b/applications/solvers/lagrangian/reactingParcelFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../reactingParcelFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/finiteArea/lnInclude \
+diff --git a/applications/solvers/lagrangian/reactingParcelFoam/simpleReactingParcelFoam/Make/options b/applications/solvers/lagrangian/reactingParcelFoam/simpleReactingParcelFoam/Make/options
+index dd75d29d..714b9707 100644
+--- a/applications/solvers/lagrangian/reactingParcelFoam/simpleReactingParcelFoam/Make/options
++++ b/applications/solvers/lagrangian/reactingParcelFoam/simpleReactingParcelFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/finiteArea/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/lagrangian/sprayFoam/Make/options b/applications/solvers/lagrangian/sprayFoam/Make/options
+index bc58479e..1a186c2c 100644
+--- a/applications/solvers/lagrangian/sprayFoam/Make/options
++++ b/applications/solvers/lagrangian/sprayFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../reactingParcelFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/finiteArea/lnInclude \
+diff --git a/applications/solvers/multiphase/MPPICInterFoam/Make/options b/applications/solvers/multiphase/MPPICInterFoam/Make/options
+index 30ed8903..0dedeb54 100644
+--- a/applications/solvers/multiphase/MPPICInterFoam/Make/options
++++ b/applications/solvers/multiphase/MPPICInterFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../VoF \
+     -I$(FOAM_SOLVERS)/multiphase/interFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/multiphase/compressibleInterFoam/Make/options b/applications/solvers/multiphase/compressibleInterFoam/Make/options
+index 8204d76d..5e2512fc 100644
+--- a/applications/solvers/multiphase/compressibleInterFoam/Make/options
++++ b/applications/solvers/multiphase/compressibleInterFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../VoF \
+     -ItwoPhaseMixtureThermo \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/multiphase/compressibleInterFoam/compressibleInterIsoFoam/Make/options b/applications/solvers/multiphase/compressibleInterFoam/compressibleInterIsoFoam/Make/options
+index 185e98d9..c7dec63d 100644
+--- a/applications/solvers/multiphase/compressibleInterFoam/compressibleInterIsoFoam/Make/options
++++ b/applications/solvers/multiphase/compressibleInterFoam/compressibleInterIsoFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I../../VoF \
+     -I../twoPhaseMixtureThermo \
+diff --git a/applications/solvers/multiphase/compressibleInterFoam/overCompressibleInterDyMFoam/Make/options b/applications/solvers/multiphase/compressibleInterFoam/overCompressibleInterDyMFoam/Make/options
+index 2b120f36..9d757828 100644
+--- a/applications/solvers/multiphase/compressibleInterFoam/overCompressibleInterDyMFoam/Make/options
++++ b/applications/solvers/multiphase/compressibleInterFoam/overCompressibleInterDyMFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I../../VoF \
+     -I../../interFoam/overInterDyMFoam \
+diff --git a/applications/solvers/multiphase/compressibleMultiphaseInterFoam/Make/options b/applications/solvers/multiphase/compressibleMultiphaseInterFoam/Make/options
+index f130c88d..ebe99b40 100644
+--- a/applications/solvers/multiphase/compressibleMultiphaseInterFoam/Make/options
++++ b/applications/solvers/multiphase/compressibleMultiphaseInterFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../VoF \
+     -I../interFoam \
+     -ImultiphaseMixtureThermo/lnInclude \
+diff --git a/applications/solvers/multiphase/icoReactingMultiphaseInterFoam/Make/options b/applications/solvers/multiphase/icoReactingMultiphaseInterFoam/Make/options
+index b20cb96a..219dccb8 100644
+--- a/applications/solvers/multiphase/icoReactingMultiphaseInterFoam/Make/options
++++ b/applications/solvers/multiphase/icoReactingMultiphaseInterFoam/Make/options
+@@ -1,6 +1,7 @@
+ phaseSystem = $(LIB_SRC)/phaseSystemModels/multiphaseInter
+ 
+ EXE_INC = \
++    -I. \
+     -I${phaseSystem}/phasesSystem/lnInclude \
+     -I${phaseSystem}/compressibleMultiPhaseTurbulenceModels/lnInclude \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/multiphase/interCondensatingEvaporatingFoam/Make/options b/applications/solvers/multiphase/interCondensatingEvaporatingFoam/Make/options
+index b7f9efca..3dd4a3a3 100644
+--- a/applications/solvers/multiphase/interCondensatingEvaporatingFoam/Make/options
++++ b/applications/solvers/multiphase/interCondensatingEvaporatingFoam/Make/options
+@@ -3,6 +3,7 @@ interFoam = $(FOAM_SOLVERS)/multiphase/interFoam
+ VoF = $(FOAM_SOLVERS)/multiphase/VoF
+ 
+ EXE_INC = \
++    -I. \
+     -I$(interPhaseChangeFoam) \
+     -I$(interFoam) \
+     -I$(VoF) \
+diff --git a/applications/solvers/multiphase/interFoam/Make/options b/applications/solvers/multiphase/interFoam/Make/options
+index 6aaa57ee..3c77cea3 100644
+--- a/applications/solvers/multiphase/interFoam/Make/options
++++ b/applications/solvers/multiphase/interFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../VoF \
+     -I$(LIB_SRC)/phaseSystemModels/twoPhaseInter/incompressibleInterPhaseTransportModel/lnInclude \
+     -I$(LIB_SRC)/phaseSystemModels/twoPhaseInter/VoFphaseIncompressibleTurbulenceModels/lnInclude \
+diff --git a/applications/solvers/multiphase/interFoam/interMixingFoam/Make/options b/applications/solvers/multiphase/interFoam/interMixingFoam/Make/options
+index ab62352e..76551a9d 100644
+--- a/applications/solvers/multiphase/interFoam/interMixingFoam/Make/options
++++ b/applications/solvers/multiphase/interFoam/interMixingFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I../../VoF \
+     -I$(LIB_SRC)/transportModels/twoPhaseMixture/lnInclude \
+diff --git a/applications/solvers/multiphase/interFoam/overInterDyMFoam/Make/options b/applications/solvers/multiphase/interFoam/overInterDyMFoam/Make/options
+index 8c7945a0..a44c25b3 100644
+--- a/applications/solvers/multiphase/interFoam/overInterDyMFoam/Make/options
++++ b/applications/solvers/multiphase/interFoam/overInterDyMFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I../../VoF \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/multiphase/interIsoFoam/Make/options b/applications/solvers/multiphase/interIsoFoam/Make/options
+index 11e09be8..19e330a3 100644
+--- a/applications/solvers/multiphase/interIsoFoam/Make/options
++++ b/applications/solvers/multiphase/interIsoFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../VoF \
+     -I$(LIB_SRC)/phaseSystemModels/twoPhaseInter/incompressibleInterPhaseTransportModel/lnInclude \
+     -I$(LIB_SRC)/phaseSystemModels/twoPhaseInter/VoFphaseIncompressibleTurbulenceModels/lnInclude \
+diff --git a/applications/solvers/multiphase/interPhaseChangeFoam/overInterPhaseChangeDyMFoam/Make/options b/applications/solvers/multiphase/interPhaseChangeFoam/overInterPhaseChangeDyMFoam/Make/options
+index 9ff6b05f..ab2247e4 100644
+--- a/applications/solvers/multiphase/interPhaseChangeFoam/overInterPhaseChangeDyMFoam/Make/options
++++ b/applications/solvers/multiphase/interPhaseChangeFoam/overInterPhaseChangeDyMFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I.. \
+     -I../../interFoam/overInterDyMFoam \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/solvers/multiphase/multiphaseInterFoam/Make/options b/applications/solvers/multiphase/multiphaseInterFoam/Make/options
+index 5daf0583..2f1c209d 100644
+--- a/applications/solvers/multiphase/multiphaseInterFoam/Make/options
++++ b/applications/solvers/multiphase/multiphaseInterFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../VoF \
+     -I../interFoam \
+     -ImultiphaseMixture/lnInclude \
+diff --git a/applications/solvers/multiphase/twoLiquidMixingFoam/Make/options b/applications/solvers/multiphase/twoLiquidMixingFoam/Make/options
+index 655c32a5..ded7a8f3 100644
+--- a/applications/solvers/multiphase/twoLiquidMixingFoam/Make/options
++++ b/applications/solvers/multiphase/twoLiquidMixingFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../VoF \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+diff --git a/applications/solvers/stressAnalysis/solidDisplacementFoam/Make/options b/applications/solvers/stressAnalysis/solidDisplacementFoam/Make/options
+index cb550fef..28d26a7f 100644
+--- a/applications/solvers/stressAnalysis/solidDisplacementFoam/Make/options
++++ b/applications/solvers/stressAnalysis/solidDisplacementFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -ItractionDisplacement/lnInclude \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude
+diff --git a/applications/solvers/stressAnalysis/solidEquilibriumDisplacementFoam/Make/options b/applications/solvers/stressAnalysis/solidEquilibriumDisplacementFoam/Make/options
+index 2393d0bd..5201a0cd 100644
+--- a/applications/solvers/stressAnalysis/solidEquilibriumDisplacementFoam/Make/options
++++ b/applications/solvers/stressAnalysis/solidEquilibriumDisplacementFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I. \
+     -I../solidDisplacementFoam \
+     -ItractionDisplacementCorrectionStress \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+diff --git a/applications/test/Tensor2D/Make/files b/applications/test/Tensor2D/Make/files
+index 29b058c0..76d3b200 100644
+--- a/applications/test/Tensor2D/Make/files
++++ b/applications/test/Tensor2D/Make/files
+@@ -1,3 +1,3 @@
+-Test-tensor2D.C
++Test-Tensor2D.C
+ 
+-EXE = $(FOAM_USER_APPBIN)/Test-tensor2D
++EXE = $(FOAM_USER_APPBIN)/Test-Tensor2D
+diff --git a/applications/utilities/mesh/conversion/ansysToFoam/Make/options b/applications/utilities/mesh/conversion/ansysToFoam/Make/options
+index 18e6fe47..63daeb15 100644
+--- a/applications/utilities/mesh/conversion/ansysToFoam/Make/options
++++ b/applications/utilities/mesh/conversion/ansysToFoam/Make/options
+@@ -1,2 +1,4 @@
+-/* EXE_INC = */
++EXE_INC = \
++    -I/opt/homebrew/opt/flex/include
++
+ /* EXE_LIBS = */
+diff --git a/applications/utilities/mesh/conversion/fluent3DMeshToFoam/Make/options b/applications/utilities/mesh/conversion/fluent3DMeshToFoam/Make/options
+index 70c838b7..7f5cfce7 100644
+--- a/applications/utilities/mesh/conversion/fluent3DMeshToFoam/Make/options
++++ b/applications/utilities/mesh/conversion/fluent3DMeshToFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I/opt/homebrew/opt/flex/include \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+     -I$(LIB_SRC)/dynamicMesh/lnInclude
+ 
+diff --git a/applications/utilities/mesh/conversion/fluentMeshToFoam/Make/options b/applications/utilities/mesh/conversion/fluentMeshToFoam/Make/options
+index 70c838b7..7f5cfce7 100644
+--- a/applications/utilities/mesh/conversion/fluentMeshToFoam/Make/options
++++ b/applications/utilities/mesh/conversion/fluentMeshToFoam/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I/opt/homebrew/opt/flex/include \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+     -I$(LIB_SRC)/dynamicMesh/lnInclude
+ 
+diff --git a/applications/utilities/mesh/conversion/gambitToFoam/Make/options b/applications/utilities/mesh/conversion/gambitToFoam/Make/options
+index 18e6fe47..63daeb15 100644
+--- a/applications/utilities/mesh/conversion/gambitToFoam/Make/options
++++ b/applications/utilities/mesh/conversion/gambitToFoam/Make/options
+@@ -1,2 +1,4 @@
+-/* EXE_INC = */
++EXE_INC = \
++    -I/opt/homebrew/opt/flex/include
++
+ /* EXE_LIBS = */
+diff --git a/src/fileFormats/Make/options b/src/fileFormats/Make/options
+index 2dc5c77a..df606b72 100644
+--- a/src/fileFormats/Make/options
++++ b/src/fileFormats/Make/options
+@@ -1,4 +1,5 @@
+-EXE_INC =
++EXE_INC = \
++    -I/opt/homebrew/opt/flex/include
+ 
+ LIB_LIBS = \
+     -lOpenFOAM
+diff --git a/src/finiteVolume/cfdTools/general/include/fvCFD.H b/src/finiteVolume/cfdTools/general/include/fvCFD.H
+index bc9f8242..6b610488 100644
+--- a/src/finiteVolume/cfdTools/general/include/fvCFD.H
++++ b/src/finiteVolume/cfdTools/general/include/fvCFD.H
+@@ -22,6 +22,7 @@
+ #include "gravityMeshObject.H"
+ 
+ #include "columnFvMesh.H"
++#include "localEulerDdtScheme.H"
+ 
+ #include "OSspecific.H"
+ #include "argList.H"
+diff --git a/src/thermophysicalModels/reactionThermo/Make/options b/src/thermophysicalModels/reactionThermo/Make/options
+index 8982d923..d3967b29 100644
+--- a/src/thermophysicalModels/reactionThermo/Make/options
++++ b/src/thermophysicalModels/reactionThermo/Make/options
+@@ -1,4 +1,5 @@
+ EXE_INC = \
++    -I/opt/homebrew/opt/flex/include \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+     -I$(LIB_SRC)/meshTools/lnInclude \
+     -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+diff --git a/wmake/makefiles/general b/wmake/makefiles/general
+index 4b18fa98..3b42d0ab 100644
+--- a/wmake/makefiles/general
++++ b/wmake/makefiles/general
+@@ -158,8 +158,8 @@ OBJECTS=$(BASENAMES:%=$(OBJECTS_DIR)/%.o)
+ 
+ LIB_HEADER_DIRS = \
+     $(EXE_INC) \
+-    -iquote. \
+-    -iquote lnInclude \
++    -I. \
++    -IlnInclude \
+     $(PROJECT_INC) \
+     $(GINC) \
+     $(SYS_INC)
+diff --git a/wmake/rules/darwin64Clang/c++ b/wmake/rules/darwin64Clang/c++
+index 746b3fe7..2935af5d 100644
+--- a/wmake/rules/darwin64Clang/c++
++++ b/wmake/rules/darwin64Clang/c++
+@@ -5,7 +5,7 @@ ifneq (,$(findstring +xcrun,$(WM_COMPILE_CONTROL)))
+ CC         := xcrun c++ -std=c++17
+ endif
+ 
+-c++ARCH    := -m64 -pthread -ftrapping-math
++c++ARCH    := -m64 -pthread
+ 
+ ifneq (,$(strip $(WM_COMPILE_OPTION)))
+     sinclude $(DEFAULT_RULES)/c++$(WM_COMPILE_OPTION)
+diff --git a/wmake/rules/darwin64Clang/general b/wmake/rules/darwin64Clang/general
+index 4a5acb5e..bf8a8bf7 100644
+--- a/wmake/rules/darwin64Clang/general
++++ b/wmake/rules/darwin64Clang/general
+@@ -5,8 +5,8 @@ include $(GENERAL_RULES)/standard
+ 
+ # Darwin-specific
+ # ----
+-COMP_OPENMP = -Xpreprocessor -fopenmp
+-LINK_OPENMP = -lomp
++COMP_OPENMP = -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include
++LINK_OPENMP = -L/opt/homebrew/opt/libomp/lib -lomp
+ # ----
+ 
+ ifneq (,$(findstring ~openmp,$(WM_COMPILE_CONTROL)))
