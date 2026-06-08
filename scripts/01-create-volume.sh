@@ -36,7 +36,7 @@ echo "Creating ${SIZE_GB}GB case-sensitive APFS sparse image at $IMAGE_PATH..."
 hdiutil create \
     -size "${SIZE_GB}g" \
     -fs "Case-sensitive APFS" \
-    -type SPARSEBUNDLE \
+    -type SPARSE \
     -volname "$VOLUME_NAME" \
     "$IMAGE_PATH"
 

@@ -333,16 +333,6 @@ index 2393d0bd..5201a0cd 100644
      -I../solidDisplacementFoam \
      -ItractionDisplacementCorrectionStress \
      -I$(LIB_SRC)/finiteVolume/lnInclude \
-diff --git a/applications/test/Tensor2D/Make/files b/applications/test/Tensor2D/Make/files
-index 29b058c0..76d3b200 100644
---- a/applications/test/Tensor2D/Make/files
-+++ b/applications/test/Tensor2D/Make/files
-@@ -1,3 +1,3 @@
--Test-tensor2D.C
-+Test-Tensor2D.C
- 
--EXE = $(FOAM_USER_APPBIN)/Test-tensor2D
-+EXE = $(FOAM_USER_APPBIN)/Test-Tensor2D
 diff --git a/applications/utilities/mesh/conversion/ansysToFoam/Make/options b/applications/utilities/mesh/conversion/ansysToFoam/Make/options
 index 18e6fe47..63daeb15 100644
 --- a/applications/utilities/mesh/conversion/ansysToFoam/Make/options
@@ -417,20 +407,33 @@ index 8982d923..d3967b29 100644
      -I$(LIB_SRC)/meshTools/lnInclude \
      -I$(LIB_SRC)/transportModels/compressible/lnInclude \
 diff --git a/wmake/makefiles/general b/wmake/makefiles/general
-index 4b18fa98..3b42d0ab 100644
+index d2b9b4e9..3b42d0ab 100644
 --- a/wmake/makefiles/general
 +++ b/wmake/makefiles/general
-@@ -158,8 +158,8 @@ OBJECTS=$(BASENAMES:%=$(OBJECTS_DIR)/%.o)
+@@ -84,9 +84,12 @@ LIB_LIBS        =
+ LIBO_LIBS       =
+ 
+ # Project include/libraries
++# On macOS (case-insensitive FS) OpenFOAM's .H files (Time.H, wchar.H, etc.)
++# shadow POSIX headers when using -I. Use -iquote so these dirs are only searched
++# for quoted "#include" forms, never for angle-bracket system includes.
+ PROJECT_INC     = \
+-    -I$(LIB_SRC)/$(WM_PROJECT)/lnInclude \
+-    -I$(LIB_SRC)/OSspecific/$(WM_OSTYPE)/lnInclude
++    -iquote $(LIB_SRC)/$(WM_PROJECT)/lnInclude \
++    -iquote $(LIB_SRC)/OSspecific/$(WM_OSTYPE)/lnInclude
+ 
+ PROJECT_LIBS    = -l$(WM_PROJECT) -ldl
+ 
+@@ -155,7 +158,7 @@ OBJECTS=$(BASENAMES:%=$(OBJECTS_DIR)/%.o)
  
  LIB_HEADER_DIRS = \
      $(EXE_INC) \
 -    -iquote. \
--    -iquote lnInclude \
 +    -I. \
-+    -IlnInclude \
+     -IlnInclude \
      $(PROJECT_INC) \
      $(GINC) \
-     $(SYS_INC)
 diff --git a/wmake/rules/darwin64Clang/c++ b/wmake/rules/darwin64Clang/c++
 index 746b3fe7..2935af5d 100644
 --- a/wmake/rules/darwin64Clang/c++
